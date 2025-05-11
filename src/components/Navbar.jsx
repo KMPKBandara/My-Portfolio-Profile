@@ -1,0 +1,83 @@
+import { useState, useEffect } from "react";
+import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+
+const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
+  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+
+  const links = [
+    { name: "Home", href: "#hero" },
+    { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
+    { name: "Education", href: "#education" },
+    { name: "Contact", href: "#contact" },
+  ];
+
+  return (
+    <nav className="fixed w-full z-50 bg-white dark:bg-gray-900 shadow">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a
+          href="#hero"
+          className="text-2xl font-bold text-blue-600 dark:text-white"
+        >
+          Pramuditha Bandara
+        </a>
+
+        <ul className="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300 font-medium">
+          {links.map((link, index) => (
+            <li key={index}>
+              {/* Update to Link from react-router-dom */}
+              <a href={link.href} className="hover:text-blue-600">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex items-center space-x-4">
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="text-gray-800 dark:text-white text-xl"
+          >
+            {darkMode ? <FaSun /> : <FaMoon />}
+          </button>
+          <button
+            onClick={toggleMenu}
+            className="md:hidden text-gray-800 dark:text-white text-xl"
+          >
+            {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <ul className="md:hidden bg-white dark:bg-gray-900 px-6 py-4 space-y-4 text-gray-800 dark:text-gray-200 font-medium">
+          {links.map((link, index) => (
+            <li key={index}>
+              {/* Update to Link from react-router-dom */}
+              <a href={link.href} onClick={toggleMenu}>
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;
