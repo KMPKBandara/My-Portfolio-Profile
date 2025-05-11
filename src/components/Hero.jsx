@@ -1,48 +1,75 @@
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaDownload, FaMedium } from "react-icons/fa";
 import profileImg from "../assets/profile.jpg";
 import cv from "../assets/Pramuditha_Bandara_CV.pdf";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-800 flex flex-col justify-center items-center text-center px-4">
+    <section className="min-h-screen pt-24 pb-10 bg-gray-50 dark:bg-gray-800 flex flex-col justify-start items-center text-center px-4">
       <motion.img
         src={profileImg}
         alt="Pramuditha Bandara"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="w-40 h-40 rounded-full object-cover border-4 border-blue-600 shadow-xl mb-6"
+        className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-4 border-blue-600 shadow-xl mb-6"
       />
+
       <motion.h1
-        className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
+        className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-5 mt-2"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
       >
         Hi, I'm Pramuditha Bandara
       </motion.h1>
+
       <motion.p
-        className="text-lg md:text-2xl text-gray-700 dark:text-gray-300 mb-6"
+        className="text-lg md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         Software Engineering Undergraduate | Full Stack Developer
       </motion.p>
-      <div className="flex space-x-4">
+
+      <div className="flex flex-wrap justify-center gap-4 mt-2">
+        <a
+          href="https://github.com/KMPKBandara"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-gray-700 text-white px-5 py-2.5 rounded hover:bg-gray-600 dark:bg-gray-300 dark:text-black dark:hover:bg-gray-400 transition text-base"
+        >
+          <FaGithub className="text-lg" />
+          GitHub
+        </a>
+
         <a
           href="https://linkedin.com/in/pramuditha-bandara-897717251"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
+          className="flex items-center gap-2 bg-blue-600 text-white px-5 py-2.5 rounded hover:bg-blue-700 transition text-base"
         >
-          Connect on LinkedIn
+          <FaLinkedin className="text-lg" />
+          LinkedIn
         </a>
+
+        <a
+          href="https://medium.com/@pramudithakavinda01"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition text-base"
+        >
+          <FaMedium className="text-lg" />
+          Medium
+        </a>
+
         <a
           href={cv}
           download
-          className="bg-gray-200 dark:bg-gray-600 text-black dark:text-white px-6 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-500"
+          className="flex items-center gap-2 bg-gray-200 dark:bg-gray-600 text-black dark:text-white px-5 py-2.5 rounded hover:bg-gray-300 dark:hover:bg-gray-500 transition text-base"
         >
+          <FaDownload className="text-lg" />
           Download CV
         </a>
       </div>

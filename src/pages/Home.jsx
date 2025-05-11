@@ -16,6 +16,9 @@ const Home = () => {
       <div id="about">
         <About />
       </div>
+      <div id="education">
+        <Education />
+      </div>
       <div id="skills">
         <Skills />
       </div>
@@ -24,9 +27,6 @@ const Home = () => {
       </div>
       <div id="experience">
         <Experience />
-      </div>
-      <div id="education">
-        <Education />
       </div>
       <div id="contact">
         <Contact />

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { FaSun, FaMoon, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,32 +30,36 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <a
           href="#hero"
-          className="text-2xl font-bold text-blue-600 dark:text-white"
+          className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-white"
         >
           Pramuditha Bandara
         </a>
 
-        <ul className="hidden md:flex space-x-8 text-gray-700 dark:text-gray-300 font-medium">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-lg text-gray-700 dark:text-gray-300 font-medium">
           {links.map((link, index) => (
             <li key={index}>
-              {/* Update to Link from react-router-dom */}
-              <a href={link.href} className="hover:text-blue-600">
+              <a
+                href={link.href}
+                className="hover:text-blue-600 transition-colors"
+              >
                 {link.name}
               </a>
             </li>
           ))}
         </ul>
 
+        {/* Toggle buttons */}
         <div className="flex items-center space-x-4">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="text-gray-800 dark:text-white text-xl"
+            className="text-2xl text-gray-800 dark:text-white"
           >
             {darkMode ? <FaSun /> : <FaMoon />}
           </button>
           <button
             onClick={toggleMenu}
-            className="md:hidden text-gray-800 dark:text-white text-xl"
+            className="md:hidden text-2xl text-gray-800 dark:text-white"
           >
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -65,11 +68,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <ul className="md:hidden bg-white dark:bg-gray-900 px-6 py-4 space-y-4 text-gray-800 dark:text-gray-200 font-medium">
+        <ul className="md:hidden bg-white dark:bg-gray-900 px-6 py-4 space-y-4 text-lg text-gray-800 dark:text-gray-200 font-medium">
           {links.map((link, index) => (
             <li key={index}>
-              {/* Update to Link from react-router-dom */}
-              <a href={link.href} onClick={toggleMenu}>
+              <a
+                href={link.href}
+                onClick={toggleMenu}
+                className="block hover:text-blue-600 transition-colors"
+              >
                 {link.name}
               </a>
             </li>
