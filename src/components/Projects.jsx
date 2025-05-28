@@ -30,7 +30,7 @@ const projects = [
     desc: "Full-stack doctor appointment booking with Stripe integration.",
     longDesc:
       "MediQ enables users to schedule medical appointments, securely pay online with Stripe, and receive timely notifications. The admin interface manages doctor schedules, patient records, and appointments effectively.",
-    tech: "MERN Stack",
+    tech: "MERN Stack (MongoDB, Express.js, React, Node.js), Stripe, Tailwind CSS",
     image: project2,
     link: "https://github.com/KMPKBandara/MediQ.git",
   },
@@ -53,6 +53,16 @@ const projects = [
     tech: "PHP, MySQL, HTML, CSS, JavaScript",
     image: project4,
     link: "https://github.com/HiruniWijerathna/Web-Mini-Project.git",
+  },
+  {
+    title: "Studiora",
+    icon: <FaStethoscope className="inline mr-2 text-green-600" />,
+    desc: "Student Management System",
+    longDesc:
+      "A responsive system to manage student records with full CRUD operations and a clean Bootstrap-based UI.",
+    tech: "PHP, Laravel, MySQL, Bootstrap",
+    image: project2,
+    link: "https://github.com/KMPKBandara/student-management-system.git",
   },
 ];
 

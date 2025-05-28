@@ -67,7 +67,7 @@ const Contact = () => {
           <div className="flex items-center gap-3">
             <FaLinkedin className="text-blue-600" />
             <a
-              href="https://linkedin.com/in/PramudithaBandara"
+              href="https://www.linkedin.com/in/pramuditha-bandara-897717251/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -86,7 +86,11 @@ const Contact = () => {
           </div>
           <div className="flex items-center gap-3">
             <FaMedium className="text-blue-600" />
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://medium.com/@pramudithakavinda01"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Pramuditha Bandara
             </a>
           </div>

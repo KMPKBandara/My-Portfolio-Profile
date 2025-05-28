@@ -7,7 +7,7 @@ function App() {
   return (
     <Router basename="/My-Portfolio-Profile">
       <Navbar />
-      <div className="pt-20">
+      <div className="pt-10">
         {/* Padding to avoid overlap with fixed navbar */}
         <Routes>
           <Route path="/" element={<Home />} />
