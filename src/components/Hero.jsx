@@ -83,7 +83,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaDownload, FaMedium } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import profileImg from "../assets/profile.jpg";
-import cv from "../assets/Pramuditha_Bandara_CV.pdf";
+import cv from "../assets/CV_Pramuditha-Bandara.pdf";
 import Bg from "../assets/Hero/background.jpg";
 import { useEffect, useRef, useState } from "react"; // Import useState and useRef
 
