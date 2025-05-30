@@ -32,7 +32,11 @@ To run the project locally in development mode: `npm start` This will open the a
 
 ## Screenshots
 
-(Add your screenshots here using markdown image syntax) Example: `![Homepage](screenshots/homepage.png)`
+![Screenshot 2025-05-29 005941](https://github.com/user-attachments/assets/9f331ca9-f8f3-4486-ac24-3d37e9d74888)
+![Screenshot 2025-05-29 010007](https://github.com/user-attachments/assets/87122e13-9d17-4f83-a360-f9cd1d9464ad)
+![Screenshot 2025-05-29 010059](https://github.com/user-attachments/assets/2a92d434-b474-4d28-a306-31944e6458bf)
+![Screenshot 2025-05-29 010120](https://github.com/user-attachments/assets/55f8819f-d4b6-4d20-af44-45d02594d9d8)
+![Screenshot 2025-05-29 010135](https://github.com/user-attachments/assets/09d4d263-029e-46c7-bf58-2b5cad419ed9)
 
 ## Contributing
 
